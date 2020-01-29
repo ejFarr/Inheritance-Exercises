@@ -21,30 +21,30 @@ public class Account
     
     public void withdraw(double sum)
     {
-	if (sum>0)
-	    bal-=sum;    
-	else
-	    System.err.println("Account.withdraw(...): "
+	    if (sum>0)
+	        bal-=sum;    
+	    else
+	        System.err.println("Account.withdraw(...): "
 			       +"cannot withdraw negative amount.");    
     }
     
-    public double getBalance()
-    {
-	return bal;
+    public double getBalance(){
+	    return bal;
+    }
+
+    public void setBalance(double bal) {
+        this.bal = bal;
     }
     
-    public double getAccountNumber()
-    {
-	return accnum;
+    public double getAccountNumber(){
+	    return accnum;
     }
     
-    public String toString()
-    {
-	return "Acc " + accnum + ": " + "balance = " + bal;    
+    public String toString(){
+	    return "Acc " + accnum + ": " + "balance = " + bal;    
     }
     
-    public final void print()
-    {
+    public final void print(){
 	//Don't override this,
 	//override the toString method
 	System.out.println( toString() );    
