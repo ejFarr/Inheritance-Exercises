@@ -27,6 +27,15 @@ public class Account
 	        System.err.println("Account.withdraw(...): "
 			       +"cannot withdraw negative amount.");    
     }
+
+    public static void update(Account account) {
+        if (account instanceof SavingsAccount) {
+            account.addInterest();
+        }
+        if (account instanceof CurrentAccount) {
+            account.isOverdraft();
+        }
+    }
     
     public double getBalance(){
 	    return bal;

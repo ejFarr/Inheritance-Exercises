@@ -6,7 +6,7 @@ public class SavingsAccount extends Account {
         this.interest = interest;
     }
 
-    public double addInterest() {
-        return getBalance() + (getBalance() * interest);
+    public void addInterest() {
+        setBalance(getBalance() + (getBalance() * interest));
     }
 }

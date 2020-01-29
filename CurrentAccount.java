@@ -13,6 +13,9 @@ public class CurrentAccount extends Account {
         else
 	    System.err.println("Account.withdraw(...): "
 			       +"cannot withdraw negative amount.");    
-        }
+    }
+
+    public boolean isOverdraft() {
+        return getBalance() + overdraft >= 0;
     }
 }
